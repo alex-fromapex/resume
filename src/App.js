@@ -9,7 +9,7 @@ class App extends Component {
           <div>
               <hr className="test" />
           </div>
-          <div className="text-center red">
+          <div className="text-center">
               <h1>Alex</h1>
               <h2>Watson</h2>
           </div>
