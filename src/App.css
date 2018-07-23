@@ -1,26 +1,2 @@
-.flex {
-    display: flex;
-
-    & > * {
-        align-items: center;
-        flex-basis:100%;
-        justify-content: center;
-    }
-}
-.flex-row {
-    flex-direction: row;
-}
-.flex-column {
-    flex-direction: column;
-}
-.flex-col-3 {
-    & > * {
-        flex-basis: calc(100%/3);
-    }
-}
-hr {
-    width: 100%;
-}
-.text-center {
-    text-align: center;
-}
+/* Fonts */
+@import './components/fonts.css';

@@ -1,0 +1,79 @@
+/* BEM placeholders */
+%flex {
+    display: flex;
+}
+%flex-column {
+    flex-direction: column;
+}
+%flex-row {
+    flex-direction: row;
+}
+%text-center {
+    text-align: center;
+}
+%width-90 {
+    width: 90%;
+}
+
+/* BEM classes */
+.font-barcode {
+    font-family: 'Libre Barcode 128 Text';
+}
+.font-oxygen {
+    font-family: 'Oxygen',sans-serif;
+}
+.flex {
+    @extend %flex;
+
+    & > * {
+        align-items: center;
+        flex-basis:100%;
+        justify-content: center;
+    }
+}
+.flex-row {
+    @extend %flex-row;
+}
+.flex-column {
+    @extend %flex-column;
+}
+@for $i from 1 through 12 {
+  .flex-col-#{$i} {
+        flex-basis: calc(100%/#{$i});
+        flex-shrink: 0;
+        flex-grow: 1;
+        min-width: calc(100%/#{$i});
+    }
+}
+
+.flex-no-grow {
+    flex-basis: 0;
+}
+.flex-vertical-center {
+    align-items: center;
+}
+
+.text-center {
+    @extend %text-center;
+}
+.width-90 {
+    @extend %width-90;
+}
+
+/* Styles */
+
+.alex-name {
+    font-size: 40px;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin: auto;
+}
+hr {
+    border:0;
+    border-top: 1px solid #000;
+    height: 1px;
+    width: 100%;
+}
+html {
+    padding: 2%;
+}
