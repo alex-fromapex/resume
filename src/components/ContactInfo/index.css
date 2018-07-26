@@ -16,6 +16,10 @@
 }
 
 /* BEM classes */
+.dividers {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
 .font-barcode {
     font-family: 'Libre Barcode 128 Text';
 }
@@ -33,6 +37,16 @@
 }
 .flex-row {
     @extend %flex-row;
+    @extend %flex;
+
+    & > * {
+        @extend %flex;
+        flex-basis: auto;
+        flex-shrink: 1;
+        flex-grow: 1;
+        width: 0;
+        word-wrap: break-word;
+    }
 }
 .flex-column {
     @extend %flex-column;
@@ -42,7 +56,8 @@
         flex-basis: calc(100%/#{$i});
         flex-shrink: 0;
         flex-grow: 1;
-        min-width: calc(100%/#{$i});
+        width: 0;
+        word-wrap: break-word;
     }
 }
 
@@ -61,19 +76,24 @@
 }
 
 /* Styles */
-
-.alex-name {
-    font-size: 40px;
-}
-h1,h2,h3,h4,h5,h6 {
-    margin: auto;
-}
-hr {
-    border:0;
-    border-top: 1px solid #000;
-    height: 1px;
-    width: 100%;
-}
 html {
     padding: 2%;
+
+    .alex-name {
+        h1,h2{
+            font-size: 40px;
+        }
+    }
+    h1,h2,h3,h4,h5,h6 {
+        margin: auto;
+    }
+    hr {
+        border:0;
+        border-top: 1px solid #000;
+        height: 1px;
+        width: 100%;
+    }
+    .contact-info {
+        margin-bottom: 2em;
+    }
 }

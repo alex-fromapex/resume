@@ -4,24 +4,31 @@ import './index.css';
 
 class WorkHistory extends React.Component {
     render() {
-        return (
-            <div className="work-history">
-                { this.props.workHistory.map((job) => {
-                    return (
-                        <div>
-                            <div>{ job.employer }</div>
-                            <div>{ job.description }</div>
-                            <ul>
-                                { job.bullets ? job.bullets.map((bullet) => {
-                                    return <li>{JSON.stringify(bullet)}</li>
-                                }) : ''
-                                }
-                            </ul>
-                        </div>
-                    )
-                })}
-            </div>
-        );
+        return this.props.workHistory.map((employer,emp_idx) => {
+                return (
+                    <div className="work-history font-oxygen" key={emp_idx}>
+                        {
+                            employer.positionsHeld.map((position, index) => {
+                                return (
+                                    <div className="position" key="{index}">
+                                        <div className="employer-name">
+                                            <strong style={{fontWeight:'700'}}>{ employer.name }</strong>
+                                            { position.dates ? ', ' + position.dates : null }
+                                        </div>
+                                        <ul>
+                                            {
+                                                position.bullets ? position.bullets.map((bullet,bullet_idx) => {
+                                                    return <li key={bullet_idx}>{bullet}</li>
+                                                }) : ''
+                                            }
+                                        </ul>
+                                    </div>
+                                )
+                            }
+                        )}
+                    </div>
+                );
+            })
     }
 };
 

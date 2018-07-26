@@ -12,3 +12,6 @@ ReactDOM.render((
     </Provider>
 ), document.getElementById('root'));
 registerServiceWorker();
+
+
+// TODO: add routes
