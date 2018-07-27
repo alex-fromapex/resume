@@ -7,6 +7,12 @@ import Education from './components/Education';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+      let date = new Date();
+      let month = date.getMonth()+1;
+      let year = date.getFullYear();
+      document.title = `watson_resume_${month}_${year}`;
+  }
   render() {
     return (
     <div className="resume">

@@ -1,4 +1,5 @@
 .ats-keywords {
-    color: white;
+    color: #FFFFFF;
     font-size: 1px;
+    --webkit-print-color-adjust: exact !important;
 }
