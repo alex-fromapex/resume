@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import './index.css';
 
 class ContactInfo extends React.Component {
@@ -7,7 +6,7 @@ class ContactInfo extends React.Component {
         return (
             <div className="contact-info font-oxygen">
                 <div className="flex-row">
-                    <div className="flex-vertical-center dividers">
+                    <div className="flex-vertical-center dividers flex-center">
                         { this.props.contactInfo.phoneNumber }
                     </div>
                     <div className="flex-column alex-name text-center">
@@ -20,7 +19,7 @@ class ContactInfo extends React.Component {
                             { this.props.contactInfo.emailAddress }
                         </div>
                     </div>
-                    <div className="flex-vertical-center dividers">
+                    <div className="flex-vertical-center dividers flex-center">
                         { this.props.contactInfo.linkedIn }
                     </div>
                 </div>
@@ -29,12 +28,8 @@ class ContactInfo extends React.Component {
     }
 };
 
-const mapStateToProps = (state, ownProps) => {
-    return state.contactInfo;
-};
-
 // const mapDispatchToProps = dispatch => bindActionCreators({
 //
 // });
 
-export default connect(mapStateToProps)(ContactInfo);
+export default ContactInfo;

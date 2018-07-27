@@ -1,10 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import './index.css';
 
 class WorkHistory extends React.Component {
     render() {
-        return this.props.workHistory.map((employer,emp_idx) => {
+        return ([
+            <h1>{this.props.title ? this.props.title : null}</h1>,
+            this.props.workHistory.map((employer,emp_idx) => {
                 return (
                     <div className="work-history font-oxygen" key={emp_idx}>
                         {
@@ -13,6 +14,7 @@ class WorkHistory extends React.Component {
                                     <div className="position" key="{index}">
                                         <div className="employer-name">
                                             <strong style={{fontWeight:'700'}}>{ employer.name }</strong>
+                                            { position.positionTitle ? ', '+ position.positionTitle : null }
                                             { position.dates ? ', ' + position.dates : null }
                                         </div>
                                         <ul>
@@ -29,15 +31,14 @@ class WorkHistory extends React.Component {
                     </div>
                 );
             })
+        ])
     }
 };
 
-const mapStateToProps = (state, ownProps) => {
-    return state.workHistory;
-};
+
 
 // const mapDispatchToProps = dispatch => bindActionCreators({
 //
 // });
 
-export default connect(mapStateToProps)(WorkHistory);
+export default WorkHistory;

@@ -65,9 +65,12 @@
     flex-basis: 0;
 }
 .flex-vertical-center {
+    justify-content: center;
+    flex-direction: column;
+}
+.flex-center {
     align-items: center;
 }
-
 .text-center {
     @extend %text-center;
 }

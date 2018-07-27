@@ -1,2 +1,15 @@
 /* Fonts */
 @import './components/fonts.css';
+body {
+    font-family: 'Oxygen';
+    position: relative;
+
+    /* &:after {
+        display: block;
+        content: 'This resume was generated with a React/Redux framework created by Alex Watson';
+        font-size: 7px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    } */
+}
