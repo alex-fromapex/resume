@@ -4,7 +4,7 @@ import './index.css';
 class ATSKeywords extends React.Component {
     render() {
         return (
-            <p class="ats-keywords">{this.props.keywords.map((keyword) => {
+            <p className="ats-keywords">{this.props.keywords.map((keyword) => {
                 return keyword+' '
             })}</p>
         );

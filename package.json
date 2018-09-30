@@ -58,6 +58,7 @@
     "predeploy":"npm run build",
     "deploy":"gh-pages -d build"
   },
+  "homepage": "http://alex-fromapex.github.io/resume/",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"
@@ -69,7 +70,6 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
     ],
-    "homepage": "http://alex-fromapex.github.io/resume/",
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transform": {

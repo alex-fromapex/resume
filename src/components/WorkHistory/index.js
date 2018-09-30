@@ -11,16 +11,16 @@ class WorkHistory extends React.Component {
                         {
                             employer.positionsHeld.map((position, index) => {
                                 return (
-                                    <div className="position" key="{index}">
-                                        <div className="employer-name">
-                                            <strong style={{fontWeight:'700'}}>{ employer.name }</strong>
-                                            { position.positionTitle ? ', '+ position.positionTitle : null }
-                                            { position.dates ? ', ' + position.dates : null }
+                                    <div className="position" key={emp_idx+'-'+index}>
+                                        <div className="employer-name" key={'en-'+index}>
+                                            <strong style={{fontWeight:'700'}} key={'st-'+index}>{ employer.name }</strong>
+                                            <span key={'pt-'+index}>{ position.positionTitle ? ', '+ position.positionTitle : null }</span>
+                                            <span key={'pd-'+index}>{ position.dates ? ', ' + position.dates : null }</span>
                                         </div>
-                                        <ul>
+                                        <ul key={'ul-'+index}>
                                             {
                                                 position.bullets ? position.bullets.map((bullet,bullet_idx) => {
-                                                    return <li key={bullet_idx}>{bullet}</li>
+                                                    return <li key={'pos-'+bullet_idx}>{bullet}</li>
                                                 }) : ''
                                             }
                                         </ul>
